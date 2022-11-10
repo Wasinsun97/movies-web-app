@@ -11,6 +11,7 @@ const Thumbnail = ({ result }) => {
         src={`${IMAGE_BASE_URL}${result.backdrop_path}`}
         height={1080}
         width={1920}
+        loading="lazy"
       />
       <div className="p-2">
         <p className="truncate max-w-md">{result.overview}</p>

@@ -6,6 +6,7 @@ import {
   MagnifyingGlassIcon as SearchIcon,
   UserIcon,
   RectangleStackIcon as CollectionIcon,
+  FilmIcon,
 } from "@heroicons/react/24/outline";
 
 const Header = () => {
@@ -17,13 +18,10 @@ const Header = () => {
         <HeaderItem title="COLLECTIONS" Icon={CollectionIcon} />
         <HeaderItem title="ACCOUNT" Icon={UserIcon} />
       </div>
-      <Image
-        className="objcet-contain"
-        src="/../public/favicon.ico"
-        width={50}
-        height={50}
-        alt={""}
-      />
+      <div className="flex flex-col items-center sm:mr-20">
+        <FilmIcon className="w-14" />
+        <h1 className="text-l text-bold italic">MOVIEFLIX</h1>
+      </div>
     </div>
   );
 };
