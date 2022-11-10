@@ -1,4 +1,7 @@
-const API_KEY = process.env.API_KEY;
+export const API_KEY = process.env.API_KEY;
+export const BASE_URL = "https://api.themoviedb.org/3";
+export const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original";
+
 const apis = {
   fetchTrending: {
     title: "Trending",
@@ -41,7 +44,7 @@ const apis = {
     url: `/discover/movie?api_key=${API_KEY}&with_genres=16`,
   },
   fetchTv: {
-    title: "Tv shows",
+    title: "TV shows",
     url: `/discover/movie?api_key=${API_KEY}&with_genres=10770`,
   },
 };
