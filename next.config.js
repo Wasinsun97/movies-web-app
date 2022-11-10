@@ -3,7 +3,10 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: [""],
+    domains: ["image.tmdb.org"],
+  },
+  experimental: {
+    appDir: true,
   },
 };
 

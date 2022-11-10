@@ -1,6 +1,8 @@
-import { useRouter } from "next/router";
+"use client";
+
+import { useRouter } from "next/navigation";
 import React from "react";
-import apis from "../pages/api/request";
+import apis from "../../utils/request";
 
 const Nav = () => {
   const router = useRouter();
