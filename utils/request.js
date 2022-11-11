@@ -31,11 +31,11 @@ const apis = {
     title: "Mystery",
     url: `/discover/movie?api_key=${API_KEY}&with_genres=9648`,
   },
-  fetchSciFiMovies: {
+  sciFiMovies: {
     title: "Sci-fi",
     url: `/discover/movie?api_key=${API_KEY}&with_genres=878`,
   },
-  fetchWesternMovies: {
+  westernMovies: {
     title: "Western",
     url: `/discover/movie?api_key=${API_KEY}&with_genres=37`,
   },
