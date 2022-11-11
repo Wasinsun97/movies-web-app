@@ -28,7 +28,7 @@ const Header = () => {
         onClick={() => router.push("/")}
       >
         <FilmIcon className="w-12" />
-        <h3 className="text-bold italic">MOVIEFLIX</h3>
+        <h3 className="text-bold italic">MOVIEDB</h3>
       </div>
     </div>
   );
