@@ -39,7 +39,7 @@ const SearchPage = () => {
       return (
         <div className="flex flex-col items-center">
           <MagnifyingGlassIcon className="h-24" />
-          <h1>Search movies, tv shows, peple etc.</h1>
+          <h1>Search movies, tv shows, people etc.</h1>
         </div>
       );
     } else {
