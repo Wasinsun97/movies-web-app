@@ -18,15 +18,19 @@ const SearchPage = () => {
   const handleSearch = async () => {
     if (ref.current.value !== "") {
       setQuery(ref.current.value);
-      const res = await fetch(
-        `${BASE_URL}${apis.search.url}${ref.current.value}`,
-        {
-          cache: "no-store",
-        }
-      );
-      res.json().then((data) => {
-        if (data.results.length > 0) setData(data);
-      });
+      try {
+        const res = await fetch(
+          `${BASE_URL}${apis.search.url}${ref.current.value}`,
+          {
+            cache: "no-store",
+          }
+        );
+        res.json().then((data) => {
+          if (data.results.length > 0) setData(data);
+        });
+      } catch (error) {
+        alert("error: ", error);
+      }
     }
   };
 

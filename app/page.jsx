@@ -2,11 +2,18 @@ import apis, { BASE_URL } from "../utils/request";
 import Results from "./components/Results";
 
 const getData = async (tag) => {
-  const res = await fetch(`${BASE_URL}${apis[tag]?.url || apis.trending.url}`, {
-    cache: "no-store",
-  });
+  try {
+    const res = await fetch(
+      `${BASE_URL}${apis[tag]?.url || apis.trending.url}`,
+      {
+        cache: "no-store",
+      }
+    );
 
-  return res.json();
+    return res.json();
+  } catch (error) {
+    alert("error: ", error);
+  }
 };
 
 export default async function Home({ params, searchParams }) {

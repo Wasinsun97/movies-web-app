@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import HeaderItem from "./HeaderItem";
 import {
   HomeIcon,
@@ -29,7 +28,11 @@ const Header = () => {
           onClick={() => router.push("/search")}
         />
         <HeaderItem title="COLLECTIONS" Icon={CollectionIcon} />
-        <HeaderItem title="ACCOUNT" Icon={UserIcon} />
+        <HeaderItem
+          title="PROFILE"
+          Icon={UserIcon}
+          onClick={() => router.push("/profile")}
+        />
       </div>
       <div
         className="flex flex-col items-center mb-5 sm:mr-20 sm:mb-0 cursor-pointer transition duration-100 transform hover:scale-125 hover:text-white"

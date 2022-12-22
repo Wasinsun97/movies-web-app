@@ -15,7 +15,7 @@ const LoginPage = () => {
       const result = await signInWithPopup(auth, googleProvider);
       if (result.user) router.push("/");
     } catch (error) {
-      console.log("error===>", error);
+      alert("error: ", error);
     }
   };
 

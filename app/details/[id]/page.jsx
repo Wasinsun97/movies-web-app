@@ -4,19 +4,23 @@ import { HandThumbUpIcon } from "@heroicons/react/24/outline";
 import { API_KEY, BASE_URL, IMAGE_BASE_URL } from "../../../utils/request";
 
 const fetchMovieById = async (id, mediaType) => {
-  let res;
-  res = await fetch(
-    `${BASE_URL}/${mediaType}/${id}?api_key=${API_KEY}&language=en-US`,
-    { cache: "no-store" }
-  );
-
-  if (!res.ok) {
+  try {
+    let res;
     res = await fetch(
-      `${BASE_URL}/movie/${id}?api_key=${API_KEY}&language=en-US`,
+      `${BASE_URL}/${mediaType}/${id}?api_key=${API_KEY}&language=en-US`,
       { cache: "no-store" }
     );
+
+    if (!res.ok) {
+      res = await fetch(
+        `${BASE_URL}/movie/${id}?api_key=${API_KEY}&language=en-US`,
+        { cache: "no-store" }
+      );
+    }
+    return res.json();
+  } catch (error) {
+    alert("error: ", error);
   }
-  return res.json();
 };
 
 const renderTags = (title, details) => (
