@@ -47,6 +47,9 @@ const apis = {
     title: "TV shows",
     url: `/discover/movie?api_key=${API_KEY}&with_genres=10770`,
   },
+  search: {
+    url: `/search/multi?api_key=${API_KEY}&language=en-US&query=`,
+  },
 };
 
 export default apis;

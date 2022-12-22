@@ -18,8 +18,16 @@ const Header = () => {
   return (
     <div className="flex flex-col-reverse sm:flex-row m-5 justify-between items-center h-auto">
       <div className="flex flex-grow justify-evenly max-w-lg">
-        <HeaderItem title="HOME" Icon={HomeIcon} />
-        <HeaderItem title="SEARCH" Icon={SearchIcon} />
+        <HeaderItem
+          title="HOME"
+          Icon={HomeIcon}
+          onClick={() => router.push("/")}
+        />
+        <HeaderItem
+          title="SEARCH"
+          Icon={SearchIcon}
+          onClick={() => router.push("/search")}
+        />
         <HeaderItem title="COLLECTIONS" Icon={CollectionIcon} />
         <HeaderItem title="ACCOUNT" Icon={UserIcon} />
       </div>

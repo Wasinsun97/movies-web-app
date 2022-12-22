@@ -1,4 +1,3 @@
-import { useSearchParams } from "next/navigation";
 import apis, { BASE_URL } from "../utils/request";
 import Results from "./components/Results";
 
