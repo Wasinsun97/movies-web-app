@@ -70,10 +70,7 @@ const SearchPage = () => {
           ref={ref}
           onKeyDown={handleOnKeydown}
         />
-        <button
-          className="rounded-md h-10 col-span-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-green-500 hover:to-cyan-500"
-          onClick={handleSearch}
-        >
+        <button className="btn-primary" onClick={handleSearch}>
           Search
         </button>
       </div>

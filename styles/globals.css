@@ -6,4 +6,10 @@
   body {
     @apply bg-[#06202A] text-gray-300;
   }
+
+  @layer components {
+    .btn-primary {
+      @apply flex items-center justify-center rounded-md h-10 col-span-1 text-white bg-gradient-to-r from-cyan-800 to-blue-800 hover:from-green-800 hover:to-cyan-800 p-4;
+    }
+  }
 }
